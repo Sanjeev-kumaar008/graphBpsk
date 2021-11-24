@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="./css/customslider.css">
     <title>Delta Modulation</title>
 </head>
+
 <body>
     <h1 class="title">Delta Modulation</h1>
 
@@ -36,6 +38,27 @@
                 </label><br>
             </div>
             <div class="container-variables">
+                <select id="dig1">
+                    <option value="1">1</option>
+                    <option value="0">0</option>
+                </select>
+                <select id="dig2">
+                    <option value="1">1</option>
+                    <option value="0">0</option>
+                </select>
+                <select id="dig3">
+                    <option value="1">1</option>
+                    <option value="0">0</option>
+                </select>
+                <select id="dig4">
+                    <option value="1">1</option>
+                    <option value="0">0</option>
+                </select>
+                <select id="dig5">
+                    <option value="1">1</option>
+                    <option value="0">0</option>
+                </select>
+                <button onclick = "signal()">Submit</button>
                 <div class="variables">
                     <h1 class="subtitle">Variables</h1>
                     <label for="fname" class="varname">Amplitude(V):</label><br>
@@ -48,15 +71,18 @@
                     </div>
                     <label for="fname" class="varname">Sampling Frequency(hz):</label><br>
                     <div class="slidecontainer">
-                        <input type="range" min="20" max="200" step="2" value="20" class="slider" id="sampling_frequency">
+                        <input type="range" min="20" max="200" step="2" value="20" class="slider"
+                            id="sampling_frequency">
                     </div>
                     <label for="fname" class="varname">Vertical Scale:</label><br>
                     <div class="slidecontainer">
-                        <input type="range" min="20" max="200" step="10" value="50" class="slider" id="vertical_scale_factor">
+                        <input type="range" min="20" max="200" step="10" value="50" class="slider"
+                            id="vertical_scale_factor">
                     </div>
                     <label for="fname" class="varname">Horizontal Scale:</label><br>
                     <div class="slidecontainer">
-                        <input type="range" min="20" max="200" step="10" value="50" class="slider" id="horizontal_scale_factor">
+                        <input type="range" min="1" max="200" step="1" value="50" class="slider"
+                            id="horizontal_scale_factor">
                     </div>
                 </div>
             </div>
@@ -74,4 +100,16 @@
 
 </body>
 <script type="module" src="./js/main.js"></script>
+<!-- <script>
+    function signal(){
+        let v1 = document.getElementById("dig1").value
+        let v3 = document.getElementById("dig3").value
+        let v2 = document.getElementById("dig2").value
+        let v5 = document.getElementById("dig5").value
+        let v4 = document.getElementById("dig4").value
+        old_str = v1 + " " + v2 + " " + v3 + " " + v4 + " " + v5
+        return old_str
+    }
+</script> -->
+
 </html>
